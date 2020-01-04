@@ -37,6 +37,14 @@ def load_texture_pair(filename):
         arcade.load_texture(filename, scale=CHARACTER_SCALING, mirrored=True)
     ]
 
+def load_texture_pair_with_frame(filename, x, y, w, h):
+    """
+    Load a texture pair, with the second being a mirror image.
+    """
+    return [
+        arcade.load_texture(filename, scale=CHARACTER_SCALING, x=x, y=y, width=w, height=h),
+        arcade.load_texture(filename, scale=CHARACTER_SCALING, mirrored=True, x=x, y=y, width=w, height=h)
+    ]
 
 class PlayerCharacter(arcade.Sprite):
     def __init__(self):
@@ -62,7 +70,7 @@ class PlayerCharacter(arcade.Sprite):
         # --- Load Textures ---
 
         # Images from Kenney.nl's Asset Pack 3
-        main_path = ":resources:images/animated_characters/female_adventurer/femaleAdventurer"
+        main_path = ":resources:images/animated_characters/ninja_gaiden/Ryu"
         # main_path = ":resources:images/animated_characters/female_person/femalePerson"
         # main_path = ":resources:images/animated_characters/male_person/malePerson"
         # main_path = ":resources:images/animated_characters/male_adventurer/maleAdventurer"
@@ -70,13 +78,19 @@ class PlayerCharacter(arcade.Sprite):
         # main_path = ":resources:images/animated_characters/robot/robot"
 
         # Load textures for idle standing
-        self.idle_texture_pair = load_texture_pair(f"{main_path}_idle.png")
+        self.idle_texture_pair = load_texture_pair_with_frame(f"{main_path}.png", 3, 4, 17, 32)
 
         # Load textures for walking
         self.walk_textures = []
-        for i in range(8):
-            texture = load_texture_pair(f"{main_path}_walk{i}.png")
-            self.walk_textures.append(texture)
+
+        texture = load_texture_pair_with_frame(f"{main_path}.png", 339, 6, 20, 31)
+        self.walk_textures.append(texture)
+
+        texture = load_texture_pair_with_frame(f"{main_path}.png", 368, 6, 22, 31)
+        self.walk_textures.append(texture)
+
+        texture = load_texture_pair_with_frame(f"{main_path}.png", 400, 6, 22, 31)
+        self.walk_textures.append(texture)
 
     def update_animation(self, delta_time: float = 1/60):
 
