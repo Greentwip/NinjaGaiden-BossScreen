@@ -18,7 +18,7 @@ SCREEN_TITLE = "Move with a Sprite Animation Example"
 
 COIN_SCALE = 0.5
 COIN_COUNT = 50
-CHARACTER_SCALING = 1
+CHARACTER_SCALING = 2
 
 MOVEMENT_SPEED = 5
 UPDATES_PER_FRAME = 7
@@ -70,7 +70,7 @@ class PlayerCharacter(arcade.Sprite):
         # --- Load Textures ---
 
         # Images from Kenney.nl's Asset Pack 3
-        main_path = ":resources:images/animated_characters/ninja_gaiden/Ryu"
+        main_path = "resources/images/animated_characters/ninja_gaiden/Ryu"
         # main_path = ":resources:images/animated_characters/female_person/femalePerson"
         # main_path = ":resources:images/animated_characters/male_person/malePerson"
         # main_path = ":resources:images/animated_characters/male_adventurer/maleAdventurer"
@@ -107,7 +107,7 @@ class PlayerCharacter(arcade.Sprite):
 
         # Walking animation
         self.cur_texture += 1
-        if self.cur_texture > 7 * UPDATES_PER_FRAME:
+        if self.cur_texture > 2 * UPDATES_PER_FRAME:
             self.cur_texture = 0
         self.texture = self.walk_textures[self.cur_texture // UPDATES_PER_FRAME][self.character_face_direction]
 
