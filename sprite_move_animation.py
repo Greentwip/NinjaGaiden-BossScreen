@@ -148,7 +148,6 @@ class MyGame(arcade.Window):
 
         self.player.center_x = SCREEN_WIDTH // 2
         self.player.center_y = SCREEN_HEIGHT // 2
-        self.player.scale = 0.8
 
         self.player_list.append(self.player)
 

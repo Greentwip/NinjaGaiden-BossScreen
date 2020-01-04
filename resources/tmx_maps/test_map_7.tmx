@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="spritesheet.tsx"/>
  <layer id="1" name="Platforms" width="40" height="15">
   <data encoding="base64" compression="zstd">
-   KLUv/WBgCJ0DALQCAAAiAAAALwAAACMAKAAoACgAKAAkLwAAACUtLCgALQAAACcAAAAgJk8vJhwAICFiYRBwwlX1Vi8+9sLO4uAF4HbjSydL42MQsOQDIvDJpLtzD1AEQUBINzAxA9oyTN1eGRtEbQOoBmADcHsw9Vd+gAU=
+   KLUv/WBgCG0DAJQCAAAiAAAALwAAACMAKAAoACgAKAAkLwAAACUtLC0AAAAnAAAAICZPLyYaACAhYmEQcMJV9VYvPvbCzuLgBeB2xZcgjY9BANkBToayXSaAWRCSDEx8gA4MU7dXxgZR2wCqAdgA3B5M/ZUfYAE=
   </data>
  </layer>
 </map>
